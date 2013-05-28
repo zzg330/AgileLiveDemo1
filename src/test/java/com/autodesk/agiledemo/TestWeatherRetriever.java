@@ -16,8 +16,8 @@ public class TestWeatherRetriever {
 	public void result_should_include_city_info() throws DocumentException, IOException {
 		WeatherRetriever retriever = new WeatherRetriever();
 		InputStream inputStream = retriever.get("70112");
-		
-		SAXReader xmlReader = new SAXReader();
+		 
+		SAXReader xmlReader = new SAXReader(); 
 		Document doc = xmlReader.read(inputStream);
 		
 		assertTrue(doc.selectSingleNode("/rss/channel/title").hasContent());

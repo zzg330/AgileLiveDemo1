@@ -1,6 +1,6 @@
 package com.autodesk.agiledemo;
 
-public class Weather {
+public class Weather { 
 	private String city;
 	private String region;
 	private String country;
@@ -21,7 +21,7 @@ public class Weather {
 	public void setRegion(String region) {
 		this.region = region;
 	}
-	public String getCountry() {
+	public String getCountry() { 
 		return country;
 	}
 	public void setCountry(String country) {
@@ -50,5 +50,17 @@ public class Weather {
 	}
 	public void setWindSpeed(String windSpeed) {
 		this.windSpeed = windSpeed;
-	}	
+	}
+	public String getWearingAdvice() {
+		if (this.temperature>=80d || this.temperature<=59d)
+			return "No Advice";
+		if (this.condition.equals("Raining") && this.temperature>=70d)
+			return "Umbrella, T-shirt";
+		if (this.condition.equals("Raining"))
+			return "Raincoat";
+		if (this.temperature>=70d)
+			return "T-shirt";
+		return "Shirts"; 
+	}
+	
 }

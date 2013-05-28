@@ -14,12 +14,12 @@ public class WeatherTest extends JBehaveStories {
 
 	@When("I type in a zipcode $zip")
 	public void whenITypeInAZipcode(String zip) {
-    	pages.weather().typeInZip(zip);
+    	pages.weather().typeInZip(zip); 
 	}
 
 	@When("I click the $name button")
 	public void whenIClickTheGetButton(String name) {
-        pages.weather().clickSubmit();
+        pages.weather().clickSubmit(); 
 	}
 
 	@Then("$field should be displayed as $value")

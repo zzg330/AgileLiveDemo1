@@ -31,9 +31,7 @@
         <li><span id="condition">Condition: </span><span id="condition-value"><%= weather.getCondition()%></span></li>
         <li><span id="humidity">Humidity: </span><span id="humidity-value"><%= weather.getHumidity()%></span></li>
         <li><span id="wind-speed">Wind Speed: </span><span id="wind-speed-value"><%= weather.getWindSpeed()%></span></li>
-<%--
         <li><span id="wearing-advice">Wearing Advice: </span><span id="wearing-advice-value"><%= weather.getWearingAdvice()%></span></li>
---%>
 	</ul>
 	<%} %>
 </body>
