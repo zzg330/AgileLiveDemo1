@@ -1,38 +1,34 @@
 package com.autodesk.agiledemo;
 
 import org.jbehave.core.annotations.Given;
-import org.jbehave.core.annotations.Pending;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class WeatherTest extends JBehaveStories {
 	@Given("I am on the weather page")
-	@Pending
 	public void givenIAmOnTheWeatherPage() {
-	  // PENDING
+		pages.weather().open();
 	}
 
 	@When("I type in a zipcode $zip")
-	@Pending
 	public void whenITypeInAZipcode(String zip) {
-	  // PENDING
+    	pages.weather().typeInZip(zip);
 	}
 
 	@When("I click the $name button")
-	@Pending
 	public void whenIClickTheGetButton(String name) {
-	  // PENDING
+        pages.weather().clickSubmit();
 	}
 
 	@Then("$field should be displayed as $value")
-	@Pending
-	public void thenCityShouldBeDisplayedAsNewOrleans(String field, String value) {
-	  // PENDING
+	public void thenFieldShouldBeDisplayedAsValue(String field, String value) {
+        assertEquals(value, pages.weather().getText(pages.weather().getFieldId(field)));
 	}
 
 	@Then("$field should be displayed")
-	@Pending
-	public void thenShouldBeDisplayed(String field) {
-	  // PENDING
+	public void thenFieldShouldBeDisplayed(String field) {
+        assertTrue(pages.weather().isElementPresent(pages.weather().getFieldId(field)));
 	}
 }
